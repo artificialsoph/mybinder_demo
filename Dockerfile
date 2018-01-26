@@ -1,16 +1,13 @@
-FROM jupyter/scipy-notebook:27ba57364579
-
-RUN pip install -U \
-    keras \
-    tensorflow \
-    numpy \
-    matplotlib \
-    ipywidgets \
-    jupyter_contrib_nbextensions \
-    yapf \
-    autopep8 \
-    rise
+FROM jupyter/tensorflow-notebook:27ba57364579
             
+RUN conda install --quiet --yes \
+    'yapf' \
+    'autopep8' \
+    'rise' \
+    'ipywidgets' \
+    'jupyter_contrib_nbextensions' && \
+    conda clean -tipsy && \
+    fix-permissions $CONDA_DIR
 
 RUN jupyter contrib nbextension install --user
 RUN jupyter nbextension enable --py widgetsnbextension
