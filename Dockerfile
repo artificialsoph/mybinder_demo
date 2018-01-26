@@ -3,7 +3,6 @@ FROM jupyter/tensorflow-notebook:27ba57364579
 RUN conda install --quiet --yes \
     'yapf' \
     'autopep8' \
-    'rise' \
     'ipywidgets' \
     'jupyter_contrib_nbextensions' && \
     conda clean -tipsy && \
