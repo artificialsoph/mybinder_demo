@@ -14,4 +14,4 @@ RUN jupyter nbextension enable --py widgetsnbextension
 RUN jupyter nbextension enable python-markdown/main
 
 # Notebooks w/ extensions that auto-run code must be "trusted" to work the first time
-RUN jupyter trust ./**.ipynb
+RUN bash jupyter trust ./**.ipynb
