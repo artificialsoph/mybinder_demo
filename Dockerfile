@@ -9,7 +9,7 @@ RUN pip install -U \
     jupyter_contrib_nbextensions \
     yapf \
     autopep8 \
-    rise \
+    rise
             
 
 RUN jupyter contrib nbextension install --user
