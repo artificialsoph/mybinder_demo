@@ -6,7 +6,8 @@ RUN pip install -U \
     ipywidgets \
     jupyter_contrib_nbextensions \
     yapf \
-    autopep8
+    autopep8 \
+    rise \
             
 
 RUN jupyter contrib nbextension install --user
