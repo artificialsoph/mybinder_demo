@@ -12,6 +12,3 @@ RUN pip install numpy \
 RUN jupyter contrib nbextension install --user
 RUN jupyter nbextension enable --py widgetsnbextension
 RUN jupyter nbextension enable python-markdown/main
-
-# Notebooks w/ extensions that auto-run code must be "trusted" to work the first time
-RUN bash jupyter trust ./**.ipynb
