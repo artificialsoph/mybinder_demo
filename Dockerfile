@@ -1,6 +1,6 @@
 FROM jupyter/tensorflow-notebook:27ba57364579
             
-RUN conda install --quiet --yes \
+RUN conda install --yes \
     'yapf' \
     'autopep8' \
     'ipywidgets' \
