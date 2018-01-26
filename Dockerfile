@@ -7,8 +7,7 @@ RUN conda install --quiet --yes \
     jupyter_contrib_nbextensions \
     vdom \
     yapf \
-    autopep8 \
-    conda remove --quiet --yes --force qt pyqt && \
+    autopep8 && \
     conda clean -tipsy && \
     fix-permissions $CONDA_DIR
             
