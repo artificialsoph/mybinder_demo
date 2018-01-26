@@ -1,6 +1,5 @@
-FROM jupyter/tensorflow-notebook:latest
-FROM jupyter/datascience-notebook:latest
-FROM jupyter/all-spark-notebook:latest
+FROM jupyter/tensorflow-notebook:27ba57364579
+FROM jupyter/datascience-notebook:27ba57364579
 
 RUN pip install --no-cache-dir vdom==0.5
 
