@@ -1,15 +1,12 @@
 FROM jupyter/tensorflow-notebook:27ba57364579
 
-RUN conda install --quiet --yes \
+RUN pip install -U \
     numpy \
     matplotlib \
     ipywidgets \
     jupyter_contrib_nbextensions \
-    vdom \
     yapf \
-    autopep8 && \
-    conda clean -tipsy && \
-    fix-permissions $CONDA_DIR
+    autopep8
             
 
 RUN jupyter contrib nbextension install --user
