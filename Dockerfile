@@ -1,6 +1,8 @@
-FROM jupyter/tensorflow-notebook:27ba57364579
+FROM jupyter/scipy-notebook:27ba57364579
 
 RUN pip install -U \
+    keras \
+    tensorflow \
     numpy \
     matplotlib \
     ipywidgets \
